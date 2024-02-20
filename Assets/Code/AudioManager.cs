@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
 
     public static AudioManager instance;
-    public static AudioMixer audioMixer;
+    public VolumeSettings volumeSettings;
 
     // Start is called before the first frame update
     void Awake()
@@ -44,19 +44,5 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
     
-    public void masterVol(float masterVol)
-    {
-
-
-    }
-
-    public void soundEffectVol(float sfxVol)
-    {
-        
-    }
-
-    public void musicVol(float musicVol)
-    {
-
-    }
+  
 }

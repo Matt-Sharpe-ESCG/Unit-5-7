@@ -7,25 +7,17 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 public class CompanyLogo : MonoBehaviour
 {
-    public VideoPlayer player;
-    int waitForSeconds;
+    public TransitionManager transitionManager;
 
-    public void Start()
+    void Start()
     {
-        waitForSeconds = 20;
+        StartCoroutine(companyLogo());
     }
 
-    public void Update()
+    IEnumerator companyLogo()
     {
-        waitForSeconds = waitForSeconds - 1;
-        if (waitForSeconds == 0) 
-        {
-            menuLoad();
-        }
-    }
+        yield return new WaitForSeconds(3);
 
-    public void menuLoad()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        transitionManager.loadMainMenu();
     }
 }
