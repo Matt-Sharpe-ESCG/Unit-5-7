@@ -4,25 +4,20 @@ using UnityEngine;
 
 public class MainOptionsMenu : MonoBehaviour
 {
-    public AudioManager audioManager;
-   
-
+    public NewAudioManager newAudioManager;
     public void volumeSettingsMenu()
     {
-        audioManager.Play("Button Click");
-        
+        NewAudioManager.Instance.PlaySFX("Button Click");        
     }
 
     public void graphicsSettingsMenu()
     {
-        audioManager.Play("Button Click");
-        
+        NewAudioManager.Instance.PlaySFX("Button Click");
     }
 
     public void backButton()
-    {
-        audioManager.Play("Button Click");
-        
+    {  
+        NewAudioManager.Instance.PlaySFX("Button Click");
     }
 
     public void SetFullscreen (bool isFullscreen)

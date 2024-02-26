@@ -4,7 +4,7 @@ using System;
 
 public class AudioManager : MonoBehaviour
 {
-    public Sound[] sounds;
+    /*public Sound[] sounds;
 
     public static AudioManager instance;
     public VolumeSettings volumeSettings;
@@ -43,6 +43,6 @@ public class AudioManager : MonoBehaviour
         }
         s.source.Play();
     }
-    
+    */
   
 }

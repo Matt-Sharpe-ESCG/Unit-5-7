@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class China : MonoBehaviour
 {
-    public AudioManager audioManager; 
+    //public AudioManager audioManager; 
     void Start()
     {
-        audioManager.Play("Game Music");
+        //audioManager.Play("Game Music");
     }
 }

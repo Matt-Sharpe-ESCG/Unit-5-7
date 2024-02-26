@@ -5,33 +5,32 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     // Audio Files
-    public AudioManager audioManager;
+    public NewAudioManager newAudioManager;
 
     public TransitionManager transitionManager;
 
-    public void Start()
+    private void Start()
     {
-        audioManager.Play("Main Menu Music");
+        NewAudioManager.Instance.PlayMusic("Menu Music");
     }
 
     public void playGame()
     {
         Debug.Log("Playing Game");
         transitionManager.playGameTrigger();
-        audioManager.Play("Button Click");
+        NewAudioManager.Instance.PlaySFX("Button Click");
+        NewAudioManager.Instance.musicSource.Stop();
     }
 
     public void openOptions()
     {
-        audioManager.Play("Button Click");
+        NewAudioManager.Instance.PlaySFX("Button Click");
     }
 
     public void quitGame()
     {
         Debug.Log("QUIT");
-        Application.Quit();
-        audioManager.Play("Button Click");
-    }
-
-    
+        Application.Quit();      
+        NewAudioManager.Instance.PlaySFX("Button Click");       
+    }  
 }
