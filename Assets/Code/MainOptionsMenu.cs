@@ -4,24 +4,27 @@ using UnityEngine;
 
 public class MainOptionsMenu : MonoBehaviour
 {
-    public NewAudioManager newAudioManager;
+    public OtherAudioManager newAudioManager;
+
+
     public void volumeSettingsMenu()
     {
-        NewAudioManager.Instance.PlaySFX("Button Click");        
+        newAudioManager.PlaySFX(newAudioManager.clickButton);        
     }
 
     public void graphicsSettingsMenu()
-    {
-        NewAudioManager.Instance.PlaySFX("Button Click");
+    {       
+        newAudioManager.PlaySFX(newAudioManager.clickButton);
     }
 
     public void backButton()
     {  
-        NewAudioManager.Instance.PlaySFX("Button Click");
+        newAudioManager.PlaySFX(newAudioManager.clickButton);
     }
 
     public void SetFullscreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        newAudioManager.PlaySFX(newAudioManager.clickButton);
     }
 }
