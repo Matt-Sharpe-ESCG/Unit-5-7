@@ -11,7 +11,6 @@ public class TransitionManager : MonoBehaviour
     // Int Variable
     public int transitionTime = 1;
 
-    // Update is called once per frame
     public void playGameTrigger()
     {
         StartCoroutine(playGame(SceneManager.GetActiveScene().buildIndex + 1));
@@ -27,7 +26,7 @@ public class TransitionManager : MonoBehaviour
 
     public void loadMainMenu()
     {
-        StartCoroutine(loadMenu(SceneManager.GetActiveScene().buildIndex));
+        StartCoroutine(loadMenu(SceneManager.GetActiveScene().buildIndex - 1));
     }
 
     IEnumerator loadMenu(int gameIndex)
@@ -36,6 +35,20 @@ public class TransitionManager : MonoBehaviour
 
         yield return new WaitForSeconds(transitionTime);
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(gameIndex);
+    }
+
+    public void quitGameTrigger()
+    {
+        StartCoroutine(quitGame());
+    }
+
+    IEnumerator quitGame()
+    {
+        animator.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        Application.Quit();
     }
 }

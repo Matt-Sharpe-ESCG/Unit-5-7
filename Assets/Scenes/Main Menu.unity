@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: d042efdc896f16643a477973d73df79c, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 7da973218490c4a41ba87019a5f1d0a2, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -950,7 +950,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &193653253
 Animator:
   serializedVersion: 7
@@ -4930,7 +4930,6 @@ GameObject:
   - component: {fileID: 1016564950}
   - component: {fileID: 1016564948}
   - component: {fileID: 1016564949}
-  - component: {fileID: 1016564952}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -5082,23 +5081,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newAudioManager: {fileID: 548585449}
   transitionManager: {fileID: 3308585216424476185}
---- !u!114 &1016564952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016564943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfceee170c37f1f4097e7ebaa4c1847e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  difficultySlider: {fileID: 0}
-  easyText: {fileID: 0}
-  normalText: {fileID: 0}
-  hardText: {fileID: 0}
-  difficultyGrade: 1
 --- !u!1 &1032915695
 GameObject:
   m_ObjectHideFlags: 0
@@ -9142,14 +9124,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2005548050199617044, guid: dbb3daa226d06f5419ef75756cfbf695, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 193653253}
-    - target: {fileID: 2005548050199617044, guid: dbb3daa226d06f5419ef75756cfbf695, type: 3}
-      propertyPath: transitionTime
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 596560646926143621, guid: 9f9b27d5afc939240b446d9997d1a869, type: 3}
       propertyPath: m_Name
       value: Transition Manager
@@ -9198,6 +9172,14 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 193653253}
+    - target: {fileID: 2005548050199617044, guid: dbb3daa226d06f5419ef75756cfbf695, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 193653253}
+    - target: {fileID: 2005548050199617044, guid: dbb3daa226d06f5419ef75756cfbf695, type: 3}
+      propertyPath: transitionTime
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

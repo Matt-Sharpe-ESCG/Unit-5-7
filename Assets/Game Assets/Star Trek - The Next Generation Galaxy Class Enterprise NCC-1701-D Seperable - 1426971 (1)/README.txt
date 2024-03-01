@@ -1,0 +1,1 @@
+Star Trek - The Next Generation Galaxy Class Enterprise NCC-1701-D Seperable by nd4spd1919 on Thingiverse: https://www.thingiverse.com/thing:1426971

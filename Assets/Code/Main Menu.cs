@@ -20,13 +20,11 @@ public class MainMenu : MonoBehaviour
     public void openOptions()
     {
         newAudioManager.PlaySFX(newAudioManager.clickButton);
-        
     }
 
     public void quitGame()
     {
-        Debug.Log("QUIT");
-        Application.Quit();      
+        Debug.Log("QUIT");    
         newAudioManager.PlaySFX(newAudioManager.clickButton);
     }  
 }
