@@ -26,5 +26,6 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("QUIT");    
         newAudioManager.PlaySFX(newAudioManager.clickButton);
+        transitionManager.quitGameTrigger();
     }  
 }

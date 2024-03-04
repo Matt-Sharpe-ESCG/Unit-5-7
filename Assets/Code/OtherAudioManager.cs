@@ -6,8 +6,20 @@ using UnityEngine.SceneManagement;
 public class OtherAudioManager : MonoBehaviour
 {
     public static OtherAudioManager Instance;
+    void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+        {
+            Destroy(Instance);
+            return;
+        }
 
-    [Header("---------- Audio Source ----------")]
+        DontDestroyOnLoad(gameObject);
+    }
+
+        [Header("---------- Audio Source ----------")]
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
 

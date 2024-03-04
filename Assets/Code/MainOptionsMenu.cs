@@ -6,7 +6,7 @@ public class MainOptionsMenu : MonoBehaviour
 {
     public OtherAudioManager newAudioManager;
 
-
+    
     public void volumeSettingsMenu()
     {
         newAudioManager.PlaySFX(newAudioManager.clickButton);        
@@ -25,6 +25,11 @@ public class MainOptionsMenu : MonoBehaviour
     public void SetFullscreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        newAudioManager.PlaySFX(newAudioManager.clickButton);
+    }
+
+    public void instructionsMenu()
+    {
         newAudioManager.PlaySFX(newAudioManager.clickButton);
     }
 }
